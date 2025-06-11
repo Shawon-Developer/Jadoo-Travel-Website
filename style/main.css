@@ -4,6 +4,17 @@
   --Blue-Zodiac: #13264d;
   --Terra-Cotta: #e2725b;
   --Orange-Peel: #ff9f00;
+  --Granite: #84817a;
+  --h1-font-size: clamp(3rem, calc(1.5rem + 4.2vw), 100rem);
+  --first-p-font-size: clamp(1rem, calc(0.5rem + 1.3vw), 100rem);
+  --third-p-font-size: clamp(1rem, calc(0.3rem + 1vw), 100rem);
+  --second-padding: clamp(0.5rem, calc(0.4rem + 1.5vw), 100rem);
+  --third-padding: clamp(0.5rem, calc(0.2rem + 1vw), 100rem);
+  --border-radius-medium: clamp(0.5rem, calc(0.1rem + 0.5vw), 100rem);
+  --play-demo-btn-size: clamp(0.5rem, calc(1rem + 2.7vw), 100rem);
+  --first-gap: clamp(1rem, calc(1rem + 1.7vw), 100rem);
+  --second-gap: clamp(.5rem, calc(0.5rem + 1vw), 100rem);
+  --third-gap: clamp(.5rem, calc(0.3rem + .5vw), 100rem);
 }
 
 * {
@@ -39,6 +50,12 @@ img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 section {
@@ -83,7 +100,68 @@ nav {
 .banner-info {
   width: 100%;
   height: 100%;
-  background-color: red;
+  display: flex;
+  align-items: center;
+}
+
+.banner-info .info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--second-gap);
+}
+
+.banner-info .info .highlight p {
+  color: var(--Terra-Cotta);
+  font-size: var(--first-p-font-size);
+  font-weight: 700;
+}
+
+.banner-info .info .banner-title h1 {
+  color: var(--Blue-Zodiac);
+  font-size: var(--h1-font-size);
+  line-height: 1;
+}
+
+.info .banner-description p {
+  color: var(--Granite);
+  font-size: var(--third-p-font-size);
+}
+
+.banner-info .info .banner-btns {
+  display: flex;
+  align-items: center;
+  gap: var(--first-gap);
+}
+
+.banner-info .info .banner-btns .btn-yellow {
+  background-color: var(--Orange-Peel);
+  color: #fff;
+  font-size: var(--third-p-font-size);
+  font-weight: 500;
+  padding: var(--third-padding) var(--second-padding);
+  border-radius: var(--border-radius-medium);
+}
+
+.banner-info .info .banner-btns .btn-play-demo {
+  display: flex;
+  align-items: center;
+  gap: var(--third-gap);
+  font-size: var(--third-p-font-size);
+  color: var(--Granite);
+}
+
+.banner-info .info .banner-btns .btn-play-demo .play-icon {
+  width: var(--play-demo-btn-size);
+  height: var(--play-demo-btn-size);
+  background-color: var(--Terra-Cotta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.banner-info .info .banner-btns .btn-play-demo .play-icon i {
+  color: #fff;
 }
 
 .banner-img {
