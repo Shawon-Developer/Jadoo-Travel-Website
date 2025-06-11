@@ -7,10 +7,13 @@
   --Granite: #84817a;
   --h1-font-size: clamp(3.5rem, calc(1.5rem + 4.2vw), 100rem);
   --first-p-font-size: clamp(1.6rem, calc(0.5rem + 1.3vw), 100rem);
+  --second-p-font-size: clamp(1.5rem, calc(0.4rem + 1.1vw), 100rem);
   --third-p-font-size: clamp(1.4rem, calc(0.3rem + 1vw), 100rem);
   --second-padding: clamp(2rem, calc(0.4rem + 1.5vw), 100rem);
   --third-padding: clamp(1rem, calc(0.2rem + 1vw), 100rem);
+  --fourth-padding: clamp(0.3rem, calc(0.1rem + 0.3vw), 100rem);
   --border-radius-medium: clamp(0.5rem, calc(0.1rem + 0.5vw), 100rem);
+  --border-radius-low: clamp(0.3rem, calc(0.1rem + 0.3vw), 100rem);
   --play-demo-btn-size: clamp(3rem, calc(1rem + 2.7vw), 100rem);
   --first-gap: clamp(1rem, calc(1rem + 1.7vw), 100rem);
   --second-gap: clamp(0.5rem, calc(0.5rem + 1vw), 100rem);
@@ -39,17 +42,12 @@ html {
 /* ==============================> Reuseable Content <============================== */
 
 a {
+  color: var(--Blue-Zodiac);
   text-decoration: none;
 }
 
 ul li {
   list-style-type: none;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
 }
 
 button {
@@ -81,6 +79,46 @@ nav {
   width: 100%;
   height: 15%;
   background-color: yellow;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-link .high-device ul {
+  display: flex;
+  align-items: center;
+  gap: var(--third-gap);
+}
+
+.navigation-link .high-device ul li a {
+  position: relative;
+  font-size: var(--second-p-font-size);
+  font-weight: 500;
+  padding: var(--fourth-padding) var(--third-padding);
+  transition: 0.3s ease;
+}
+
+.navigation-link .high-device ul li a::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 0.2vw;
+  background-color: var(--Blue-Zodiac);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navigation-link .high-device ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .header-cover-bg {
@@ -172,6 +210,12 @@ nav {
 .banner-img .main-img {
   width: 100%;
   height: 100%;
+}
+
+.banner-img .main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 /* ==============================> End Header Section <============================== */
