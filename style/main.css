@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --Blue-Zodiac: #13264d;
+  --Terra-Cotta: #e2725b;
+  --Orange-Peel: #ff9f00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+}
+
+.volkhov {
+  font-family: "Volkhov", serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==============================> Reuseable Content <============================== */
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
