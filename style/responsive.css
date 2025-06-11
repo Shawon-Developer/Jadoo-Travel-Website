@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1024px) {
+  .web-main-container {
+    width: 85%;
+  }
+
+  nav {
+    height: 12%;
+  }
+
+  .banner {
+    height: 88%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .web-main-container {
+    width: 95%;
+  }
+
+  nav {
+    height: 10%;
+  }
+
+  .banner {
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+
+  .banner-info {
+    height: 50%;
+  }
+
+  .banner-img {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .web-main-container {
+    width: 98%;
+  }
+
+  .header-cover-bg {
+    height: 100%;
+    right: -90%;
+  }
+
+  .header-cover-bg img {
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header-cover-bg {
+    right: -95%;
+  }
+}

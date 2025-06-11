@@ -17,10 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow: hidden;
-}
-
 .volkhov {
   font-family: "Volkhov", serif;
 }
@@ -38,3 +34,66 @@ a {
 ul li {
   list-style-type: none;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+section {
+  overflow: hidden;
+}
+
+.web-main-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* ==============================> Start Header Section <============================== */
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 15%;
+  background-color: yellow;
+}
+
+.header-cover-bg {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  z-index: -99;
+}
+
+.banner {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-info {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img .main-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==============================> End Header Section <============================== */
