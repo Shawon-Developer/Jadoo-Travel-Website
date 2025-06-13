@@ -22,7 +22,7 @@
   }
 
   .navigation-link .medium-device {
-    display: none;
+    display: block;
   }
 
   .navigation-link .high-device {
@@ -62,12 +62,30 @@
     width: 98%;
   }
 
+  nav {
+    height: 8%;
+  }
+
+  .nav-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .m-nav-container .m-nav-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .header-cover-bg {
     height: 100%;
   }
 
   .header-cover-bg img {
     object-fit: cover;
+  }
+
+  .banner {
+    height: 92%;
   }
 }
 

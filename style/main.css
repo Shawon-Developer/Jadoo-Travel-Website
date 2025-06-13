@@ -5,6 +5,10 @@
   --Terra-Cotta: #e2725b;
   --Orange-Peel: #ff9f00;
   --Granite: #84817a;
+  --menu-btn-font-size: clamp(2.5rem, calc(1rem + 2vw), 100rem);
+  --close-menu-btn-container-size: clamp(3.8rem, calc(1.5rem + 3vw), 100rem);
+  --m-nav-links-font-size: clamp(3rem, calc(1rem + 3vw), 100rem);
+  --m-nav-links-padding-top: clamp(2.5rem, calc(1rem + 3vw), 100rem);
   --h1-font-size: clamp(3.5rem, calc(1.5rem + 4.2vw), 100rem);
   --first-p-font-size: clamp(1.6rem, calc(0.5rem + 1.3vw), 100rem);
   --second-p-font-size: clamp(1.5rem, calc(0.4rem + 1.1vw), 100rem);
@@ -87,6 +91,75 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navigation-link .medium-device {
+  display: none;
+}
+
+.navigation-link .medium-device .m-nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000080;
+}
+
+.m-nav-container .m-nav-main {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  margin-left: auto;
+}
+
+.m-nav-main .m-nav-header {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.m-nav-main .m-nav-header .close-menu-btn {
+  width: var(--close-menu-btn-container-size);
+  height: var(--close-menu-btn-container-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Blue-Zodiac);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.navigation-link .medium-device .open-menu-btn i,
+.m-nav-main .m-nav-header .close-menu-btn i {
+  font-size: var(--menu-btn-font-size);
+}
+
+.m-nav-main .m-nav-links {
+  width: 100%;
+  height: 90%;
+}
+
+.m-nav-main .m-nav-links ul {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--first-gap);
+  padding-top: var(--m-nav-links-padding-top);
+}
+
+.m-nav-main .m-nav-links ul li {
+  width: 100%;
+  border-bottom: 0.2vw solid var(--Granite);
+}
+
+.m-nav-main .m-nav-links ul li a {
+  font-size: var(--m-nav-links-font-size);
+  padding: var(--third-padding) var(--second-padding);
 }
 
 .navigation-link .high-device ul {
