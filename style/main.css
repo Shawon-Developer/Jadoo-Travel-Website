@@ -5,24 +5,27 @@
   --Terra-Cotta: #e2725b;
   --Orange-Peel: #ff9f00;
   --Granite: #84817a;
-  --menu-btn-font-size: clamp(2.5rem, calc(1rem + 2vw), 100rem);
+  --menu-btn-font-size: clamp(2.7rem, calc(1rem + 2vw), 100rem);
   --close-menu-btn-container-size: clamp(3.8rem, calc(1.5rem + 3vw), 100rem);
   --m-nav-links-font-size: clamp(3rem, calc(1rem + 3vw), 100rem);
   --m-nav-links-padding-top: clamp(2.5rem, calc(1rem + 3vw), 100rem);
   --h1-font-size: clamp(3.5rem, calc(1.5rem + 4.2vw), 100rem);
-  --h2-font-size: clamp(1.5rem, calc(1rem + 2.5vw), 100rem);
-  --first-p-font-size: clamp(1.6rem, calc(0.5rem + 1.3vw), 100rem);
-  --second-p-font-size: clamp(1.5rem, calc(0.4rem + 1.1vw), 100rem);
+  --h2-font-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
+  --h4-font-size: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
+  --first-p-font-size: clamp(1.8rem, calc(0.5rem + 1.3vw), 100rem);
+  --second-p-font-size: clamp(1.6rem, calc(0.4rem + 1.1vw), 100rem);
   --third-p-font-size: clamp(1.4rem, calc(0.3rem + 1vw), 100rem);
   --second-padding: clamp(2rem, calc(0.4rem + 1.5vw), 100rem);
+  --first-padding: clamp(1rem, calc(0.5rem + 2vw), 100rem);
   --third-padding: clamp(1rem, calc(0.2rem + 1vw), 100rem);
   --fourth-padding: clamp(0.3rem, calc(0.1rem + 0.3vw), 100rem);
+  --border-radius-high: clamp(1rem, calc(0.5rem + 1vw), 100rem);
   --border-radius-medium: clamp(0.5rem, calc(0.1rem + 0.5vw), 100rem);
   --border-radius-low: clamp(0.3rem, calc(0.1rem + 0.3vw), 100rem);
   --play-demo-btn-size: clamp(3rem, calc(1rem + 2.7vw), 100rem);
-  --first-gap: clamp(1rem, calc(1rem + 1.7vw), 100rem);
-  --second-gap: clamp(0.5rem, calc(0.5rem + 1vw), 100rem);
-  --third-gap: clamp(0.5rem, calc(0.3rem + 0.5vw), 100rem);
+  --first-gap: clamp(2rem, calc(1rem + 1.7vw), 100rem);
+  --second-gap: clamp(1.7rem, calc(0.5rem + 1vw), 100rem);
+  --third-gap: clamp(.7rem, calc(0.3rem + 0.5vw), 100rem);
 }
 
 * {
@@ -231,6 +234,7 @@ nav {
 .banner-info .info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--second-gap);
 }
 
@@ -316,14 +320,46 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--second-gap);
+  padding-top: clamp(2.5rem, calc(1rem + 1.7vw), 100rem);
 }
 
 .category-card {
-  background-color: green;
+  padding: var(--second-padding);
+  border-radius: var(--border-radius-high);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.category-card:hover {
+  transform: translateY(-7%);
+  box-shadow: 0 .2vw .5vw #0000004D;
 }
 
 .category-card .card-main {
-  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--third-gap);
   text-align: center;
 }
+
+.category-card .card-main .icon i {
+  font-size: var(--menu-btn-font-size);
+  color: var(--Blue-Zodiac);
+  transition: .3s ease;
+}
+
+.category-card:hover.category-card .card-main .icon i {
+  color: var(--Orange-Peel);
+}
+
+.card-main .c-t-card-title h4 {
+  font-size: var(--h4-font-size);
+}
+
+.card-main .c-t-card-description p {
+  color: var(--Granite);
+  font-size: var(--third-p-font-size);
+  line-height: 1.1;
+}
+
 /* ==============================> End Category Section <============================== */
