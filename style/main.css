@@ -455,6 +455,10 @@ nav {
   margin-top: 2.5vw;
 }
 
+.easy-step-container .step:first-child {
+  margin-top: 0;
+}
+
 .step-icon-container .step-icon {
   width: var(--close-menu-btn-container-size);
   height: var(--close-menu-btn-container-size);
