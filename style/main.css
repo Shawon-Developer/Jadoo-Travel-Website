@@ -7,11 +7,14 @@
   --Granite: #84817a;
   --menu-btn-font-size: clamp(2.7rem, calc(1rem + 2vw), 100rem);
   --close-menu-btn-container-size: clamp(3.8rem, calc(1.5rem + 3vw), 100rem);
+  --close-menu-btn-container-size-min: clamp(3rem, calc(1rem + 2.5vw), 100rem);
   --m-nav-links-font-size: clamp(3rem, calc(1rem + 3vw), 100rem);
   --m-nav-links-padding-top: clamp(2.5rem, calc(1rem + 3vw), 100rem);
   --h1-font-size: clamp(3.5rem, calc(1.5rem + 4.2vw), 100rem);
   --h2-font-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
   --h4-font-size: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
+  --h5-font-size: clamp(1.6rem, calc(0.5rem + 1.5vw), 100rem);
+  --h6-font-size: clamp(1.6rem, calc(0.5rem + 1.2vw), 100rem);
   --first-p-font-size: clamp(1.8rem, calc(0.5rem + 1.3vw), 100rem);
   --second-p-font-size: clamp(1.6rem, calc(0.4rem + 1.1vw), 100rem);
   --third-p-font-size: clamp(1.4rem, calc(0.3rem + 1vw), 100rem);
@@ -69,6 +72,11 @@ section {
   overflow: hidden;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .web-main-container {
   width: 80%;
   height: 100%;
@@ -77,6 +85,7 @@ section {
 
 .section-body {
   padding-top: clamp(2.5rem, calc(1rem + 1.7vw), 100rem);
+  padding-bottom: 1vw;
 }
 
 .section-highlight p {
@@ -378,7 +387,7 @@ nav {
 .destination-card {
   box-shadow: 0 0.2vw 0.5vw #0000004d;
   cursor: pointer;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .destination-card:hover {
@@ -401,7 +410,7 @@ nav {
 .destination-card .destination-info p {
   font-size: var(--third-p-font-size);
   color: var(--Granite);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .destination-card:hover.destination-card .destination-info p {
@@ -426,3 +435,126 @@ nav {
 }
 
 /* ==============================> End Top Selling Section <============================== */
+
+/* ==============================> Start Book Trip Section <============================== */
+
+.book-trip-container-body {
+  display: flex;
+  align-items: center;
+}
+
+.easy-step-container,
+.trip-info-container {
+  width: 50%;
+}
+
+.easy-step-container .step {
+  width: 90%;
+  display: flex;
+  gap: var(--second-gap);
+  margin-top: 2.5vw;
+}
+
+.step-icon-container .step-icon {
+  width: var(--close-menu-btn-container-size);
+  height: var(--close-menu-btn-container-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Orange-Peel);
+  margin-top: 0.2vw;
+  border-radius: var(--border-radius-medium);
+}
+
+.step:nth-child(2) .step-icon-container .step-icon {
+  background-color: var(--Terra-Cotta);
+}
+
+.step:nth-child(3) .step-icon-container .step-icon {
+  background-color: var(--Blue-Zodiac);
+}
+
+.step-icon-container .step-icon i {
+  font-size: var(--first-p-font-size);
+  color: #fff;
+}
+
+.step-info .step-title h6 {
+  font-size: var(--h6-font-size);
+  line-height: 1;
+}
+
+.step-info .step-description p {
+  font-size: var(--third-p-font-size);
+  color: var(--Granite);
+  line-height: 1.2;
+  margin-top: 0.5vw;
+}
+
+.trip-info {
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+  padding: var(--second-padding);
+  box-shadow: 0 0.2vw 0.5vw #0000004d;
+  border-radius: var(--border-radius-low);
+}
+
+.trip-info .img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-low);
+  overflow: hidden;
+}
+
+.trip-info .trip-title h5 {
+  font-size: var(--h5-font-size);
+}
+
+.trip-info .trip-description p {
+  font-size: var(--second-p-font-size);
+  color: var(--Granite);
+}
+
+.trip-info .trip-info-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--third-gap);
+}
+
+.trip-info .trip-info-icon .icon {
+  width: var(--close-menu-btn-container-size-min);
+  height: var(--close-menu-btn-container-size-min);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadada;
+  border-radius: 50%;
+}
+
+.trip-info .trip-info-icon .icon i {
+  font-size: var(--third-p-font-size);
+}
+
+.trip-info .trip-going-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-info .trip-going-info p {
+  font-size: var(--second-p-font-size);
+  color: var(--Granite);
+}
+
+.trip-info .trip-going-info p span {
+  display: inline-block;
+  margin-right: var(--third-gap);
+}
+
+.trip-info .trip-going-info .love-icon i {
+  font-size: var(--second-p-font-size);
+  color: var(--Granite);
+}
+
+/* ==============================> End Book Trip Section <============================== */
