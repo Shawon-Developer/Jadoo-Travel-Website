@@ -29,6 +29,7 @@
   --first-gap: clamp(2rem, calc(1rem + 1.7vw), 100rem);
   --second-gap: clamp(1.7rem, calc(0.5rem + 1vw), 100rem);
   --third-gap: clamp(0.7rem, calc(0.3rem + 0.5vw), 100rem);
+  --user-profile-container: clamp(5rem, calc(3rem + 5vw), 100rem);
 }
 
 * {
@@ -84,6 +85,7 @@ img {
 }
 
 .section-body {
+  height: 100%;
   padding-top: clamp(2.5rem, calc(1rem + 1.7vw), 100rem);
   padding-bottom: 1vw;
 }
@@ -498,7 +500,7 @@ nav {
 .trip-info {
   display: flex;
   flex-direction: column;
-  gap: .5vw;
+  gap: 0.5vw;
   padding: var(--second-padding);
   box-shadow: 0 0.2vw 0.5vw #0000004d;
   border-radius: var(--border-radius-low);
@@ -562,3 +564,67 @@ nav {
 }
 
 /* ==============================> End Book Trip Section <============================== */
+
+/* ==============================> End Testimonials Section <============================== */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-card {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  padding: var(--second-padding);
+}
+
+.testimonials-card .card {
+  text-align: center;
+  padding: var(--second-padding);
+  box-shadow: 0 0 0.3vw #0000004d, 0 0 0.6vw #0000004d;
+}
+
+.testimonials-card .user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonials-card .user-profile .user-img {
+  width: var(--user-profile-container);
+  height: var(--user-profile-container);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials-card .user-profile .user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials-card .user-profile .user-name-and-location {
+  margin-top: 0.5vw;
+}
+
+.testimonials-card .user-profile .user-name-and-location h6 {
+  font-size: var(--h6-font-size);
+  line-height: 1.1;
+}
+
+.testimonials-card .user-profile .user-name-and-location p {
+  font-size: var(--third-p-font-size);
+}
+
+.testimonials-card .user-comments {
+  margin-top: var(--third-gap);
+}
+
+.testimonials-card .user-comments p {
+  font-size: var(--second-p-font-size);
+  color: var(--Granite);
+  line-height: 1.2;
+}
+/* ==============================> End Testimonials Section <============================== */
