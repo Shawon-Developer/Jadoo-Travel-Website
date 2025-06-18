@@ -12,6 +12,7 @@
   --m-nav-links-padding-top: clamp(2.5rem, calc(1rem + 3vw), 100rem);
   --h1-font-size: clamp(3.5rem, calc(1.5rem + 4.2vw), 100rem);
   --h2-font-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
+  --h3-font-size: clamp(2rem, calc(0.5rem + 1.5vw), 100rem);
   --h4-font-size: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
   --h5-font-size: clamp(1.6rem, calc(0.5rem + 1.5vw), 100rem);
   --h6-font-size: clamp(1.6rem, calc(0.5rem + 1.2vw), 100rem);
@@ -71,6 +72,10 @@ button {
 section {
   margin-top: 4vw;
   overflow: hidden;
+}
+
+section:last-child {
+  overflow: scroll;
 }
 
 img {
@@ -623,8 +628,79 @@ nav {
 }
 
 .testimonials-card .user-comments p {
-  font-size: var(--second-p-font-size);
+  font-size: var(--third-p-font-size);
   color: var(--Granite);
   line-height: 1.2;
 }
 /* ==============================> End Testimonials Section <============================== */
+
+/* ==============================> Start Subscribe Section <============================== */
+
+.subscribe-container {
+  background-color: #dadada;
+  padding: var(--first-padding);
+  border-radius: 5vw 1vw 5vw 1vw;
+}
+
+.subscribe-container .subscribe-main {
+  text-align: center;
+  padding: var(--first-padding);
+}
+
+.subscribe-main .subscribe-icon {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: var(--close-menu-btn-container-size);
+  height: var(--close-menu-btn-container-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7070ec;
+  border-radius: 50%;
+}
+
+.subscribe-main .subscribe-icon i {
+  color: #fff;
+  font-size: var(--first-p-font-size);
+}
+
+.subscribe-main .title h3 {
+  font-size: var(--h3-font-size);
+  color: var(--Blue-Zodiac);
+  line-height: 1.3;
+}
+
+.subscribe-main .subscribe-input {
+  width: 50%;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--second-gap);
+  margin-top: 2vw;
+}
+
+.subscribe-main .subscribe-input input {
+  width: 100%;
+  height: 100%;
+  font-size: var(--third-p-font-size);
+  padding: var(--third-padding) var(--second-padding);
+  border: none;
+  border-radius: var(--border-radius-medium);
+}
+
+.subscribe-main .subscribe-input input:focus-within {
+  outline: none;
+}
+
+.subscribe-main .subscribe-input button {
+  background-color: var(--Terra-Cotta);
+  color: #fff;
+  font-size: var(--third-p-font-size);
+  font-weight: 500;
+  padding: var(--third-padding) var(--second-padding);
+  border-radius: var(--border-radius-medium);
+}
+
+/* ==============================> End Subscribe Section <============================== */
