@@ -700,6 +700,7 @@ footer i {
 .footer-main-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: var(--first-gap);
 }
 
 .this-web-info {
@@ -727,10 +728,6 @@ footer i {
   grid-column: 5 / span 1;
 }
 
-.footer-links ul li {
-  margin-top: 0.3vw;
-}
-
 .footer-links ul li a {
   font-size: var(--third-p-font-size);
   color: var(--Granite);
@@ -739,8 +736,7 @@ footer i {
 .footer-links ul li:first-child {
   font-size: var(--first-p-font-size);
   font-weight: 700;
-  line-height: 3.2;
-  margin-top: 0;
+  line-height: 2.5;
 }
 
 .this-web-social-info {
